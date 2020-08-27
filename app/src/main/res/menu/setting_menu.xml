@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:icon="@drawable/ic_baseline_more_vert_24"
+        app:showAsAction="ifRoom"
+        android:title="">
+
+        <menu>
+            <item
+                android:id="@+id/edit_username"
+                android:icon="@drawable/ic_baseline_edit_24"
+                android:title="@string/setting_change_username"
+                app:showAsAction="never" />
+
+            <item
+                android:id="@+id/exit_account"
+                android:icon="@drawable/ic_baseline_exit_to_app_24"
+                android:title="@string/setting_exit_account"
+                app:showAsAction="never" />
+        </menu>
+
+    </item>
+</menu>

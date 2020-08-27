@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Telegram</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="setting_change_username">Change username</string>
+    <string name="setting_exit_account">Exit account</string>
+    <string name="register_yout_phone">Your phone</string>
+    <string name="label_phone_number_setting">Click, change number phone</string>
+    <string name="content_discription">image_registration</string>
+    <string name="defult_code">_ _ _ _ _ _</string>
+</resources>

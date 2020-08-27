@@ -1,0 +1,58 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="MaterialDrawerTheme.Light">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="registration_edit_text">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">16sp</item>
+        <item name="android:layout_marginTop">16sp</item>
+        <item name="android:layout_marginRight">16sp</item>
+        <item name="android:textColor">@color/md_black_1000</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:inputType">phone</item>
+    </style>
+
+    <style name="registration_button_next">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">@dimen/horizontal_margin</item>
+        <item name="android:backgroundTint">@color/md_blue_grey_300</item>
+    </style>
+
+    <style name="setting_bottom_line">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@color/md_grey_600</item>
+        <item name="android:layout_marginStart">@dimen/horizontal_margin</item>
+        <item name="android:layout_marginEnd">@dimen/horizontal_margin</item>
+        <item name="android:layout_marginTop">@dimen/vertical_margine</item>
+    </style>
+
+    <style name="setting_image_change_photo">
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:layout_marginEnd">16dp</item>
+        <item name="android:layout_width">@dimen/setting_change_photo_width</item>
+        <item name="android:layout_height">@dimen/setting_change_photo_height</item>
+        <item name="android:layout_margin">16dp</item>
+    </style>
+
+    <style name="edit_text_code">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/md_black_1000</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:maxLength">6</item>
+        <item name="android:layout_margin">@dimen/horizontal_margin</item>
+        <item name="android:autofillHints"></item>
+    </style>
+
+</resources>
