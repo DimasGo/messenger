@@ -15,6 +15,7 @@ import com.example.telegram.activity.RegistrationActivity
 import com.example.telegram.databinding.ActivityMainBinding
 import com.example.telegram.ui.`object`.AppDrawer
 import com.example.telegram.ui.fragment.ChatFragment
+import com.example.telegram.ui.utility.AUTH
 import com.example.telegram.ui.utility.SendNotification
 import com.google.firebase.auth.FirebaseAuth
 
@@ -24,7 +25,6 @@ class MainActivity : AppCompatActivity() {
     private lateinit var mToolBar: Toolbar
     private lateinit var mAppDrawer: AppDrawer
 
-    private lateinit var mAuth: FirebaseAuth
 
     private var channelID = "com.example.notification"
     private var channelName = "CODELY_CHANNEL"
@@ -39,7 +39,7 @@ class MainActivity : AppCompatActivity() {
         super.onStart()
         initFieles()
         initFunc()
-        SendNotification(channelID, channelName, "Notification", "Telegram is open")
+        //SendNotification(channelID, channelName, "Notification", "Telegram is open")
     }
 
     override fun onStop() {
@@ -48,7 +48,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initFunc() {
-        if (mAuth.currentUser!= null) {
+        if (AUTH.currentUser!= null) {
             setSupportActionBar(mToolBar)
             mAppDrawer.createMenu()
             supportFragmentManager.beginTransaction()
@@ -62,7 +62,7 @@ class MainActivity : AppCompatActivity() {
         mToolBar = mBinding.mainToolBar
         mAppDrawer = AppDrawer(this, mToolBar)
 
-        mAuth = FirebaseAuth.getInstance()
+        AUTH = FirebaseAuth.getInstance()
     }
 
 }

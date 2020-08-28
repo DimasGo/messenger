@@ -14,7 +14,7 @@
                 app:showAsAction="never" />
 
             <item
-                android:id="@+id/exit_account"
+                android:id="@+id/exit_account_button"
                 android:icon="@drawable/ic_baseline_exit_to_app_24"
                 android:title="@string/setting_exit_account"
                 app:showAsAction="never" />

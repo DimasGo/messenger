@@ -54,7 +54,7 @@ class PhoneLoginFragment : Fragment(R.layout.fragment_phone_login) {
         } else
 
             authUser()
-          //  replaceFragment(ConfirmSmsFragment())
+           //replaceFragment(ConfirmSmsFragment())
     }
 
     private fun authUser() {

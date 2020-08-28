@@ -4,6 +4,7 @@ import androidx.fragment.app.Fragment
 import com.example.telegram.MainActivity
 import com.example.telegram.R
 import com.example.telegram.activity.RegistrationActivity
+import com.example.telegram.ui.utility.AUTH
 import com.example.telegram.ui.utility.AppTextWatcher
 import com.example.telegram.ui.utility.replaceActivity
 import com.example.telegram.ui.utility.showToat
@@ -11,13 +12,11 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.PhoneAuthProvider
 import kotlinx.android.synthetic.main.fragment_confirm_sms.*
 
-class ConfirmSmsFragment(val mPhoneNumber: String, val id: String) : Fragment(R.layout.fragment_confirm_sms) {
-
-    private lateinit var mAuth: FirebaseAuth
+class ConfirmSmsFragment(val PhoneNumber: String, val id: String) : Fragment(R.layout.fragment_confirm_sms) {
 
     override fun onStart() {
         super.onStart()
-        (activity as RegistrationActivity).title = mPhoneNumber
+        (activity as RegistrationActivity).title = PhoneNumber
         registration_text_code.addTextChangedListener(AppTextWatcher {
             val string = registration_text_code.text.toString()
             if (string.length == 6) {
@@ -30,7 +29,7 @@ class ConfirmSmsFragment(val mPhoneNumber: String, val id: String) : Fragment(R.
         val code = registration_text_code.text.toString()
         val credential = PhoneAuthProvider.getCredential(id, code)
 
-        mAuth.signInWithCredential(credential).addOnCompleteListener {
+        AUTH.signInWithCredential(credential).addOnCompleteListener {
             if (it.isSuccessful) {
                 showToat("Hello")
                 (activity as RegistrationActivity).replaceActivity(MainActivity())
