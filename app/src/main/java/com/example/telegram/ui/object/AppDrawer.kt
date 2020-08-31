@@ -1,6 +1,5 @@
 package com.example.telegram.ui.`object`
 
-import android.provider.ContactsContract
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.example.telegram.R
@@ -70,13 +69,9 @@ class AppDrawer(val mainActivity: AppCompatActivity, val toolbar: androidx.appco
 
                     when (position) {
                         1 -> mainActivity.replaceFragment(CreateGroupFragment())
-
-                        2 -> mainActivity.replaceFragment(SecurituChatFragment())
-
+                        2 -> mainActivity.replaceFragment(SecurityChatFragment())
                         3 -> mainActivity.replaceFragment(ContactsFragment())
-
                         4 -> mainActivity.replaceFragment(FavoriteFragment())
-
                         5 -> mainActivity.replaceFragment(OptionsFragment())
                     }
                     return false

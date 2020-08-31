@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.telegram.R
 import com.example.telegram.databinding.ActivityRegistrationBinding
 import com.example.telegram.ui.fragment.PhoneLoginFragment
+import com.example.telegram.ui.utility.initFirebase
 import com.example.telegram.ui.utility.replaceFragment
 
 class RegistrationActivity : AppCompatActivity() {
@@ -17,6 +18,7 @@ class RegistrationActivity : AppCompatActivity() {
 
         mBinding = ActivityRegistrationBinding.inflate(layoutInflater)
         setContentView(mBinding.root)
+        initFirebase()
     }
 
     override fun onStart() {

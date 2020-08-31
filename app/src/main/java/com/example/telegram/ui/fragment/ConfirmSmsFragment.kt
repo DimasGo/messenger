@@ -4,11 +4,7 @@ import androidx.fragment.app.Fragment
 import com.example.telegram.MainActivity
 import com.example.telegram.R
 import com.example.telegram.activity.RegistrationActivity
-import com.example.telegram.ui.utility.AUTH
-import com.example.telegram.ui.utility.AppTextWatcher
-import com.example.telegram.ui.utility.replaceActivity
-import com.example.telegram.ui.utility.showToat
-import com.google.firebase.auth.FirebaseAuth
+import com.example.telegram.ui.utility.*
 import com.google.firebase.auth.PhoneAuthProvider
 import kotlinx.android.synthetic.main.fragment_confirm_sms.*
 
@@ -31,11 +27,24 @@ class ConfirmSmsFragment(val PhoneNumber: String, val id: String) : Fragment(R.l
 
         AUTH.signInWithCredential(credential).addOnCompleteListener {
             if (it.isSuccessful) {
-                showToat("Hello")
-                (activity as RegistrationActivity).replaceActivity(MainActivity())
-            } else {
-                showToat(it.exception?.message.toString())
-            }
+
+                val uid = AUTH.currentUser?.uid.toString()
+                val dateMAp = mutableMapOf<String, Any>()
+
+                dateMAp[USER_ID] = uid
+                dateMAp[USER_PHONE] = PhoneNumber
+                dateMAp[USERNAME] = id
+
+                REF_DATABASE_ROOT.child(NODE_USERS).child(uid).updateChildren(dateMAp)
+                    .addOnCompleteListener{
+                        if (it.isSuccessful){
+                            showToat("Hello")
+                            (activity as RegistrationActivity).replaceActivity(MainActivity())
+                        } else showToat(it.exception?.message.toString())
+                }
+
+            } else showToat(it.exception?.message.toString())
+
         }
     }
 }

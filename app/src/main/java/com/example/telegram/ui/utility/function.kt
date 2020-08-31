@@ -6,18 +6,15 @@ import android.app.NotificationManager
 import android.content.Context
 import android.content.Intent
 import android.os.Build
-import android.os.Message
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.NotificationCompat
-import androidx.core.content.ContextCompat.getSystemService
 import androidx.fragment.app.Fragment
 import com.example.telegram.R
 
 fun Fragment.showToat(message: String) {
     Toast.makeText(this.context, message, Toast.LENGTH_SHORT).show()
 }
-
 
 fun AppCompatActivity.replaceActivity(activity: AppCompatActivity) {
     startActivity(Intent(this, activity::class.java))

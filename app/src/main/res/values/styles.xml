@@ -32,7 +32,7 @@
         <item name="android:background">@color/md_grey_600</item>
         <item name="android:layout_marginStart">@dimen/horizontal_margin</item>
         <item name="android:layout_marginEnd">@dimen/horizontal_margin</item>
-        <item name="android:layout_marginTop">@dimen/vertical_margine</item>
+        <item name="android:layout_marginTop">@dimen/vertical_margin</item>
     </style>
 
     <style name="setting_image_change_photo">
@@ -44,7 +44,7 @@
     </style>
 
     <style name="edit_text_code">
-        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textColor">@color/md_black_1000</item>
         <item name="android:textSize">16sp</item>
@@ -52,6 +52,47 @@
         <item name="android:gravity">center</item>
         <item name="android:maxLength">6</item>
         <item name="android:layout_margin">@dimen/horizontal_margin</item>
+    </style>
+
+    <style name="phone_login_fragment">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/md_black_1000</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:background">@drawable/bagraund_edit_text_registration</item>
+        <item name="android:layout_margin">@dimen/horizontal_margin</item>
+        <item name="android:inputType">phone</item>
+    </style>
+
+    <style name="main_tool_bar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">?attr/actionBarSize</item>
+        <item name="android:background">@android:color/darker_gray</item>
+        <item name="android:elevation">4dp</item>
+    </style>
+
+    <style name="registration_tool_bar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">?attr/actionBarSize</item>
+        <item name="android:background">@android:color/darker_gray</item>
+        <item name="android:elevation">4dp</item>
+    </style>
+
+    <style name="circle_image_option">
+        <item name="android:layout_width">@dimen/setting_size_image_width</item>
+        <item name="android:layout_height">@dimen/setting_size_image_height</item>
+        <item name="android:layout_margin">16dp</item>
+    </style>
+
+    <style name="username_option">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">@dimen/horizontal_margin</item>
+        <item name="android:layout_marginTop">@dimen/vertical_margin</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/md_white_1000</item>
     </style>
 
 </resources>

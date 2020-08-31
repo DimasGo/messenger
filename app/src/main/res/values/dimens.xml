@@ -10,5 +10,4 @@
 
     <dimen name="setting_change_photo_width">35dp</dimen>
     <dimen name="setting_change_photo_height">35dp</dimen>
-    <dimen name="vertical_margine">10dp</dimen>
 </resources>

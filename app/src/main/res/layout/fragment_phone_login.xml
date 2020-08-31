@@ -8,18 +8,11 @@
 
     <EditText
         android:id="@+id/setting_phone_edit_text"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textColor="@color/md_black_1000"
-        android:textSize="16sp"
-        android:padding="10dp"
-        android:maxLines="1"
-        android:layout_margin="@dimen/horizontal_margin"
+        android:hint="Your phone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:autofillHints=""
-        android:inputType="phone" />
+        style="@style/phone_login_fragment" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
        android:id="@+id/image_registration_next"

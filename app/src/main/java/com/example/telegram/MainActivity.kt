@@ -1,22 +1,15 @@
 package com.example.telegram
 
-import android.app.Notification
-import android.app.NotificationChannel
-import android.app.NotificationManager
-import android.content.Context
 import android.content.Intent
-import android.os.Build
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
-import androidx.core.app.NotificationCompat
-import androidx.core.content.ContextCompat
 import com.example.telegram.activity.RegistrationActivity
 import com.example.telegram.databinding.ActivityMainBinding
 import com.example.telegram.ui.`object`.AppDrawer
 import com.example.telegram.ui.fragment.ChatFragment
 import com.example.telegram.ui.utility.AUTH
-import com.example.telegram.ui.utility.SendNotification
+import com.example.telegram.ui.utility.initFirebase
 import com.google.firebase.auth.FirebaseAuth
 
 class MainActivity : AppCompatActivity() {
@@ -25,9 +18,8 @@ class MainActivity : AppCompatActivity() {
     private lateinit var mToolBar: Toolbar
     private lateinit var mAppDrawer: AppDrawer
 
-
-    private var channelID = "com.example.notification"
-    private var channelName = "CODELY_CHANNEL"
+    //private var channelID = "com.example.notification"
+    //private var channelName = "CODELY_CHANNEL"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -44,7 +36,6 @@ class MainActivity : AppCompatActivity() {
 
     override fun onStop() {
         super.onStop()
-
     }
 
     private fun initFunc() {
@@ -62,7 +53,7 @@ class MainActivity : AppCompatActivity() {
         mToolBar = mBinding.mainToolBar
         mAppDrawer = AppDrawer(this, mToolBar)
 
-        AUTH = FirebaseAuth.getInstance()
+        initFirebase()
     }
 
 }
