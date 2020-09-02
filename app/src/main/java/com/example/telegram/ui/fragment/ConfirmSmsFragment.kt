@@ -8,7 +8,8 @@ import com.example.telegram.ui.utility.*
 import com.google.firebase.auth.PhoneAuthProvider
 import kotlinx.android.synthetic.main.fragment_confirm_sms.*
 
-class ConfirmSmsFragment(val PhoneNumber: String, val id: String) : Fragment(R.layout.fragment_confirm_sms) {
+class ConfirmSmsFragment(val PhoneNumber: String, val id: String) :
+    Fragment(R.layout.fragment_confirm_sms) {
 
     override fun onStart() {
         super.onStart()
@@ -36,12 +37,12 @@ class ConfirmSmsFragment(val PhoneNumber: String, val id: String) : Fragment(R.l
                 dateMAp[USERNAME] = id
 
                 REF_DATABASE_ROOT.child(NODE_USERS).child(uid).updateChildren(dateMAp)
-                    .addOnCompleteListener{
-                        if (it.isSuccessful){
+                    .addOnCompleteListener {
+                        if (it.isSuccessful) {
                             showToat("Hello")
                             (activity as RegistrationActivity).replaceActivity(MainActivity())
                         } else showToat(it.exception?.message.toString())
-                }
+                    }
 
             } else showToat(it.exception?.message.toString())
 

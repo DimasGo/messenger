@@ -7,7 +7,5 @@ class FavoriteFragment : BaseFragment(R.layout.fragment_favorite) {
 
     override fun onResume() {
         super.onResume()
-
-        showToat("Favorite")
     }
 }

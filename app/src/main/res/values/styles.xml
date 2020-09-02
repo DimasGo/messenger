@@ -95,4 +95,20 @@
         <item name="android:textColor">@color/md_white_1000</item>
     </style>
 
+    <style name="username_text_option">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/md_black_1000</item>
+        <item name="android:layout_marginStart">@dimen/horizontal_margin</item>
+    </style>
+
+    <style name="bio_text_option">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/md_black_1000</item>
+        <item name="android:layout_marginStart">@dimen/horizontal_margin</item>
+    </style>
+
 </resources>

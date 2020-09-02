@@ -108,15 +108,10 @@
 
         <TextView
             android:id="@+id/set_name_account"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:text="dima_goncharuk"
-            android:textSize="16sp"
-            android:textColor="@color/md_black_1000"
-            android:layout_marginStart="@dimen/horizontal_margin"
             app:layout_constraintTop_toTopOf="@id/change_name_block"
             app:layout_constraintStart_toStartOf="parent"
-            />
+            style="@style/username_text_option" />
 
         <TextView
             android:id="@+id/label_name_account"
@@ -145,15 +140,10 @@
 
         <TextView
             android:id="@+id/set_about"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:text="BIO"
-            android:textSize="16sp"
-            android:textColor="@color/md_black_1000"
-            android:layout_marginStart="@dimen/horizontal_margin"
             app:layout_constraintTop_toTopOf="@id/change_about_block"
             app:layout_constraintStart_toStartOf="parent"
-            />
+            style="@style/bio_text_option" />
 
         <TextView
             android:id="@+id/label_about_account"
