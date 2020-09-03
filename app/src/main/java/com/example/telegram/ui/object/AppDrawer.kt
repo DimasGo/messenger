@@ -2,6 +2,7 @@ package com.example.telegram.ui.`object`
 
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import androidx.drawerlayout.widget.DrawerLayout
 import com.example.telegram.R
 import com.example.telegram.ui.fragment.*
 import com.example.telegram.ui.utility.replaceFragment
@@ -17,10 +18,13 @@ class AppDrawer(val mainActivity: AppCompatActivity, val toolbar: androidx.appco
 
     private lateinit var mDrawer: Drawer
     private lateinit var mHeader: AccountHeader
+    private lateinit var mDrawerLayout: DrawerLayout
 
     fun createMenu(){
         createHeader()
         createDrawer()
+
+        mDrawerLayout = mDrawer.drawerLayout
     }
 
     private fun createDrawer() {
@@ -87,5 +91,25 @@ class AppDrawer(val mainActivity: AppCompatActivity, val toolbar: androidx.appco
                 ProfileDrawerItem().withName("Dima Goncharuk")
                     .withEmail("+38066298752")
             ).build()
+    }
+
+    fun disebleDrawer(){
+        mDrawer.actionBarDrawerToggle?.isDrawerIndicatorEnabled = false
+        mainActivity.supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        mDrawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED)
+
+        toolbar.setNavigationOnClickListener{
+            mainActivity.supportFragmentManager.popBackStack()
+        }
+    }
+
+    fun enbledDrawer(){
+        mainActivity.supportActionBar?.setDisplayHomeAsUpEnabled(false)
+        mDrawer.actionBarDrawerToggle?.isDrawerIndicatorEnabled = true
+        mDrawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED)
+
+        toolbar.setNavigationOnClickListener{
+            mDrawer.openDrawer()
+        }
     }
 }

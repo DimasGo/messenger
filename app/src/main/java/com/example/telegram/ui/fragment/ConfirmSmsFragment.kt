@@ -39,7 +39,7 @@ class ConfirmSmsFragment(val PhoneNumber: String, val id: String) :
                 REF_DATABASE_ROOT.child(NODE_USERS).child(uid).updateChildren(dateMAp)
                     .addOnCompleteListener {
                         if (it.isSuccessful) {
-                            showToat("Hello")
+                            showToat("Welcome")
                             (activity as RegistrationActivity).replaceActivity(MainActivity())
                         } else showToat(it.exception?.message.toString())
                     }

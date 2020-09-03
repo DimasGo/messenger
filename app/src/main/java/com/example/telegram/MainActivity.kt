@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var mBinding: ActivityMainBinding
     private lateinit var mToolBar: Toolbar
-    private lateinit var mAppDrawer: AppDrawer
+    lateinit var mAppDrawer: AppDrawer
 
     //private var channelID = "com.example.notification"
     //private var channelName = "CODELY_CHANNEL"
@@ -39,7 +39,9 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initFunc() {
-        if (AUTH.currentUser!= null) {
+
+        //AUTH.currentUser!= null
+        if (true) {
             setSupportActionBar(mToolBar)
             mAppDrawer.createMenu()
             supportFragmentManager.beginTransaction()
