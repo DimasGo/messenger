@@ -28,7 +28,7 @@
 
         <TextView
             android:id="@+id/name_profile"
-            android:text="@string/app_name"
+            tools:text="@string/app_name"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@id/profile_image"
             app:layout_constraintStart_toEndOf="@id/profile_image"
@@ -36,9 +36,10 @@
 
 
         <TextView
+            android:id="@+id/setting_status"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Online"
+            tools:text="Online"
             android:layout_marginStart="16dp"
             android:textSize="14sp"
             android:textColor="@color/md_white_1000"
@@ -74,7 +75,7 @@
             android:id="@+id/set_phone_number"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="+380662987052"
+            tools:text="+380662987052"
             android:textSize="16sp"
             android:textColor="@color/md_black_1000"
             android:layout_marginStart="@dimen/horizontal_margin"
@@ -108,7 +109,7 @@
 
         <TextView
             android:id="@+id/set_name_account"
-            android:text="dima_goncharuk"
+            tools:text="dima_goncharuk"
             app:layout_constraintTop_toTopOf="@id/change_name_block"
             app:layout_constraintStart_toStartOf="parent"
             style="@style/username_text_option" />
@@ -117,7 +118,7 @@
             android:id="@+id/label_name_account"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/label_phone_number_setting"
+            android:text="Change name account"
             android:textSize="@dimen/smallText"
             android:textColor="@color/md_grey_600"
             android:layout_marginStart="@dimen/horizontal_margin"
@@ -139,8 +140,8 @@
         android:background="@drawable/ripple_effect">
 
         <TextView
-            android:id="@+id/set_about"
-            android:text="BIO"
+            android:id="@+id/set_bio"
+            tools:text="BIO"
             app:layout_constraintTop_toTopOf="@id/change_about_block"
             app:layout_constraintStart_toStartOf="parent"
             style="@style/bio_text_option" />
@@ -149,11 +150,11 @@
             android:id="@+id/label_about_account"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/label_phone_number_setting"
+            android:text="change bio"
             android:textSize="@dimen/smallText"
             android:textColor="@color/md_grey_600"
             android:layout_marginStart="@dimen/horizontal_margin"
-            app:layout_constraintTop_toBottomOf="@id/set_about"
+            app:layout_constraintTop_toBottomOf="@id/set_bio"
             app:layout_constraintStart_toStartOf="parent"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>

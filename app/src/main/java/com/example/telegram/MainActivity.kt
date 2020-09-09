@@ -6,17 +6,20 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import com.example.telegram.activity.RegistrationActivity
 import com.example.telegram.databinding.ActivityMainBinding
+import com.example.telegram.model.User
 import com.example.telegram.ui.`object`.AppDrawer
 import com.example.telegram.ui.fragment.ChatFragment
-import com.example.telegram.ui.utility.AUTH
-import com.example.telegram.ui.utility.initFirebase
+import com.example.telegram.ui.utility.*
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.ValueEventListener
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var mBinding: ActivityMainBinding
     private lateinit var mToolBar: Toolbar
-    lateinit var mAppDrawer: AppDrawer
+    public lateinit var mAppDrawer: AppDrawer
 
     //private var channelID = "com.example.notification"
     //private var channelName = "CODELY_CHANNEL"
@@ -34,28 +37,30 @@ class MainActivity : AppCompatActivity() {
         //SendNotification(channelID, channelName, "Notification", "Telegram is open")
     }
 
-    override fun onStop() {
-        super.onStop()
-    }
 
     private fun initFunc() {
-
-        //AUTH.currentUser!= null
-        if (true) {
+        if (AUTH.currentUser!= null) {
             setSupportActionBar(mToolBar)
             mAppDrawer.createMenu()
-            supportFragmentManager.beginTransaction()
-                .replace(R.id.dataContent, ChatFragment()).commit()
+            replaceFragment(ChatFragment())
         } else {
-            startActivity(Intent(this, RegistrationActivity::class.java))
+            replaceActivity(RegistrationActivity())
         }
     }
+
 
     private fun initFieles() {
         mToolBar = mBinding.mainToolBar
         mAppDrawer = AppDrawer(this, mToolBar)
 
         initFirebase()
+        initUser()
     }
 
+    private fun initUser() {
+        REF_DATABASE_ROOT.child(NODE_USERS).child(UID)
+            .addListenerForSingleValueEvent(AppValueEventListener{
+            USER = it.getValue(User::class.java) ?: User()
+        })
+    }
 }

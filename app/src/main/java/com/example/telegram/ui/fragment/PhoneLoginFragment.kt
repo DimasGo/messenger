@@ -52,7 +52,6 @@ class PhoneLoginFragment : Fragment(R.layout.fragment_phone_login) {
         if (setting_phone_edit_text.text.toString().isEmpty()) {
             showToat("Enter number phone")
         } else
-
             authUser()
            //replaceFragment(ConfirmSmsFragment())
     }
