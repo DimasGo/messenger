@@ -6,12 +6,10 @@ import android.view.MenuItem
 import com.example.telegram.MainActivity
 import com.example.telegram.R
 import com.example.telegram.activity.RegistrationActivity
-import com.example.telegram.model.User
-import com.example.telegram.ui.utility.AUTH
-import com.example.telegram.ui.utility.USER
-import com.example.telegram.ui.utility.replaceActivity
-import com.example.telegram.ui.utility.replaceFragment
-import com.google.firebase.auth.FirebaseAuth
+import com.example.telegram.utility.AUTH
+import com.example.telegram.utility.USER
+import com.example.telegram.utility.replaceActivity
+import com.example.telegram.utility.replaceFragment
 import kotlinx.android.synthetic.main.fragment_options.*
 
 class OptionsFragment : BaseFragment(R.layout.fragment_options) {

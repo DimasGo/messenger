@@ -1,4 +1,4 @@
-package com.example.telegram.ui.utility
+package com.example.telegram.utility
 
 import android.text.Editable
 import android.text.TextWatcher

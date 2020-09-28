@@ -1,13 +1,14 @@
 package com.example.telegram.ui.fragment
 
-import android.view.*
-import androidx.fragment.app.Fragment
+import android.view.Menu
+import android.view.MenuInflater
+import android.view.MenuItem
 import com.example.telegram.MainActivity
 import com.example.telegram.R
-import com.example.telegram.ui.utility.*
-import kotlinx.android.synthetic.main.fragment_change_username.*
+import com.example.telegram.utility.*
+import kotlinx.android.synthetic.main.fragment_change_name.*
 
-class ChangeUsername : BaseFragment(R.layout.fragment_change_username) {
+class ChangeUsername : BaseFragment(R.layout.fragment_change_name) {
 
     override fun onResume() {
         super.onResume()
@@ -34,7 +35,7 @@ class ChangeUsername : BaseFragment(R.layout.fragment_change_username) {
         val surname = setting_surname_text.text.toString()
 
         if (name.isEmpty()) {
-            showToat("Please, write your name")
+            showToat("Please enter your name")
         } else {
             val fullname = "$name $surname"
 

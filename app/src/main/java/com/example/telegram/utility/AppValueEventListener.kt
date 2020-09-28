@@ -1,4 +1,4 @@
-package com.example.telegram.ui.utility
+package com.example.telegram.utility
 
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError

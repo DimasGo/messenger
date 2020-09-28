@@ -1,6 +1,5 @@
 package com.example.telegram
 
-import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
@@ -9,17 +8,14 @@ import com.example.telegram.databinding.ActivityMainBinding
 import com.example.telegram.model.User
 import com.example.telegram.ui.`object`.AppDrawer
 import com.example.telegram.ui.fragment.ChatFragment
-import com.example.telegram.ui.utility.*
-import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.database.DataSnapshot
-import com.google.firebase.database.DatabaseError
-import com.google.firebase.database.ValueEventListener
+import com.example.telegram.utility.*
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var mBinding: ActivityMainBinding
+    private lateinit var mAppDrawer: AppDrawer
     private lateinit var mToolBar: Toolbar
-    public lateinit var mAppDrawer: AppDrawer
+
 
     //private var channelID = "com.example.notification"
     //private var channelName = "CODELY_CHANNEL"

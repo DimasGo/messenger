@@ -5,7 +5,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.drawerlayout.widget.DrawerLayout
 import com.example.telegram.R
 import com.example.telegram.ui.fragment.*
-import com.example.telegram.ui.utility.replaceFragment
+import com.example.telegram.utility.USER
+import com.example.telegram.utility.replaceFragment
 import com.mikepenz.materialdrawer.AccountHeader
 import com.mikepenz.materialdrawer.AccountHeaderBuilder
 import com.mikepenz.materialdrawer.Drawer
@@ -88,8 +89,8 @@ class AppDrawer(val mainActivity: AppCompatActivity, val toolbar: androidx.appco
             .withActivity(mainActivity)
             .withHeaderBackground(R.drawable.header)
             .addProfiles(
-                ProfileDrawerItem().withName("Dima Goncharuk")
-                    .withEmail("+38066298752")
+                ProfileDrawerItem().withName(USER.fullname)
+                    .withEmail(USER.phone)
             ).build()
     }
 
