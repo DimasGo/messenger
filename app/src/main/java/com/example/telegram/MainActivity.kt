@@ -1,5 +1,6 @@
 package com.example.telegram
 
+import android.app.Activity
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
@@ -58,5 +59,11 @@ class MainActivity : AppCompatActivity() {
             .addListenerForSingleValueEvent(AppValueEventListener{
             USER = it.getValue(User::class.java) ?: User()
         })
+    }
+
+
+    private fun TestBranchFun(){
+        replaceActivity(RegistrationActivity())
+
     }
 }
